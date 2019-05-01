@@ -1,24 +1,10 @@
 import cv2
 import numpy as np
 import time
-import argparse
-
-parser = argparse.ArgumentParser()
-# Input argument
-parser.add_argument("--video", help = "Path to input video file. Skip this argument to capture frames from a camera.")
-
-args = parser.parse_args()
-
-print("""
-Harry :  Hey !! Would you like to try my invisibility cloak ??
-         Its awesome !!
-        
-         Prepare to get invisible .....................
-    """)
 
 # Creating an VideoCapture object
 # This will be used for image acquisition later in the code.
-cap = cv2.VideoCapture("Input.mp4")
+cap = cv2.VideoCapture(0)
 
 # We give some time for the camera to setup
 time.sleep(3)
